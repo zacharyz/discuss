@@ -7,6 +7,7 @@ import { z } from "zod";
 import { auth } from "@/auth";
 import { db } from "@/db";
 import paths from "@/path";
+import { resolve } from "path";
 
 const createTopicSchema = z.object({
     name: z.string().min(3).regex(/^[a-z-]+$/,{message: 'must be lowercase letter or dashes without spaces'}),
