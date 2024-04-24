@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { db } from "@/db";
-import paths from "@/path";
+import paths from "@/paths";
 
 
 const createTopicSchema = z.object({
@@ -67,7 +67,7 @@ export async function createTopic(formState: CreateTopicFormState, formData: For
         }
     }
 
-    const path = paths.topicShowPath(topic.slug);
+    const path = paths.topicShow(topic.slug);
     revalidatePath('/');
     redirect(path);
 

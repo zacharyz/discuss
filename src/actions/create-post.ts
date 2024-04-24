@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { db } from "@/db";
-import paths from "@/path";
+import paths from "@/paths";
 
 const createPostSchema = z.object({
     title: z.string().min(3),
@@ -78,7 +78,7 @@ export async function createPost(slug: string, formState: CreatePostFormState, f
     }
     
 
-    revalidatePath(paths.topicShowPath(topic.slug));
+    revalidatePath(paths.topicShow(topic.slug));
     redirect(paths.postShow(topic.id, post.id));
 
     return {
