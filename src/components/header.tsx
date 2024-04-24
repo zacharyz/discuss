@@ -4,12 +4,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Input,
-  Button,
-  Avatar,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
 } from "@nextui-org/react";
 import SearchInput from "./search-input";
 import HeaderAuth from "./header-auth";

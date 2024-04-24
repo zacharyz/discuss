@@ -4,7 +4,7 @@ import { db } from "@/db";
 export type PostWithData = Post & {
   topic: { slug: string };
   _count: { comments: number };
-  user: { name: string };
+  user: { name: string | null };
 };
 
 export function fetchPostsBySearchTerm(term: string): Promise<PostWithData[]> {
