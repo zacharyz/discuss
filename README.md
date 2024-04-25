@@ -2,7 +2,7 @@ This is a simple nextjs project that functions like a discussion forum similar t
 
 Highlights:
 NextJS v14 using the App Router
-NextAuth
+NextAuth with github user authentication
 NextUI with TailwindCSS Styling
 Zod for form validation
 Prisma for db orm.
